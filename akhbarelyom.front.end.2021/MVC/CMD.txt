@@ -1,0 +1,20 @@
+﻿
+#############################################################################################################################################################
+#  62
+#  
+#  +50
+#  Since you're using the project in a .net framework library, there's an issue with auto-generated binding redirects (might be resolved in the upcoming 
+#  15.3 update / 2.0 .net core CLI). To work around it, add this in your cpsroj file (preferably before any <Import> element for a .targets file if present):
+#  
+#  <PropertyGroup>
+#    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+#    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+#  </PropertyGroup>
+#
+#  This should force MSBuild to create / update a YourProject.dll.config file containing the necessary binding redirects.
+#############################################################################################################################################################
+
+
+dotnet tool update --global dotnet-ef --version 5.0.0
+
+dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer -o Data -c AppDbContext
