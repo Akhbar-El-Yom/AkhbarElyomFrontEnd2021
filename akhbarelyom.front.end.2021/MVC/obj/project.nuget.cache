@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zHd02CvrDFruxlmQo+c9QeJA3DGTcR/pDSKMtP8pMt6wTSFR+N9Yp92X0TZarSQ424ZAmSeJrN6bcdkkK0EuYg==",
+  "success": true,
+  "projectFilePath": "E:\\AkhbarElYom.com\\GitHub\\AkhbarElyomFrontEnd2021\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ahmed\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\ahmed\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
