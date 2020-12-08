@@ -8,7 +8,6 @@ E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\MVC.pdb
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\MVC.Views.dll
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\MVC.Views.pdb
-E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\obj\Debug\netcoreapp3.1\MVC.csprojAssemblyReference.cache
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\obj\Debug\netcoreapp3.1\MVC.AssemblyInfoInputs.cache
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\obj\Debug\netcoreapp3.1\MVC.AssemblyInfo.cs
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\obj\Debug\netcoreapp3.1\MVC.csproj.CoreCompileInputs.cache
@@ -81,3 +80,8 @@ E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\obj\Debug\netcoreapp3.1\MVC.dll.config
+E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\bundleconfig.json
+E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\libman.json
+E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\obj\Debug\netcoreapp3.1\MVC.csprojAssemblyReference.cache
+E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\package-lock.json
+E:\AkhbarElYom.com\GitHub\AkhbarElyomFrontEnd2021\akhbarelyom.front.end.2021\MVC\bin\Debug\netcoreapp3.1\package.json

@@ -1,48 +1,1476 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MVC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8">
+
+    <!--Color Themes-->
+    <link href="~/css/vendors.min.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html#5shiv/3.7.3/html#5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+
+    <link href="~/css/site.min.css" rel="stylesheet" />
+
+    @RenderSection("head", required: false)
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MVC</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <div class="page-wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!--Header Top-->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="clearfix">
+                        <!--Top Left-->
+                        <div class="top-left col-md-8 col-sm-12 col-xs-12" style="float: right; text-align:right;">
+                            <div class="single-item-carousel owl-carousel owl-theme owl-rtl">
+                                <div class="slide">
+                                    <div class="text"><span style="color: #6dadfa;">أخبار مصر:</span> وزير النقل: إدخال «الواي فاي والشاشات» في جميع القطارات تدريجيا</div>
+                                </div>
+                                <div class="slide">
+                                    <div class="text"><span style="color: #6dadfa;">حوارات وتحقيقات:</span> «الروضة» قرية الأحزان.. تتحول لـ«أيقونة» التنمية في سيناء</div>
+                                </div>
+                                <div class="slide">
+                                    <div class="text"> «<span style="color: #6dadfa;">اقتصاد:</span>الريف المصري الجديد» يفتتح مقر البنك الزراعي بالمنطقة الخدمية بالمُغرة</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Top Right-->
+                        <div class="top-right pull-left col-md-4 col-sm-12 col-xs-12">
+
+                            <ul class="social-nav">
+                                <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            <!--Header-Upper-->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="clearfix">
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+                        <div class="pull-right logo-outer hidden-sm hidden-xs">
+                            <div class="logo" style="margin-left: 10px;"><a href="index1.aspx"></a></div>
+                        </div>
+                        <div class="pull-right logo-outer hidden-sm hidden-xs" style="width: 17%;text-align: right;margin-top: 43px;">
+                            <a href="index1.aspx" style="/*! text-align: right; */">
+                                رئيس مجلس الإدارة : أحمد جلال
+                                رئيس التحرير : جمال الشناوى
+                            </a>
+                        </div>
+
+                        <div class="pull-right logo-outer hidden-md hidden-lg">
+                            <div class="logomobile"><a href="index1.aspx"></a></div>
+                        </div>
+
+                        <div class="pull-left upper-right clearfix">
+                            <div class="add-image">
+                                <a href="#"><img src="images/resource/header-add.jpg" alt="" /></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+            <!--Header Lower-->
+            <div class="header-lower">
+                <div class="auto-container">
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix" id="bs-example-navbar-collapse-1">
+                                <ul class="navigation clearfix">
+                                    <li class="dropdown">
+                                        <a href="#"><i class="fa fa-home" style="font-size:xx-large"></i></a>
+
+                                    </li>
+                                    <li class="current dropdown">
+                                        <a href="#">مصر</a>
+                                        <ul>
+                                            <li><a href="#">أخبار مصر</a></li>
+                                            <li><a href="header-2.html#">أخبار محافظات</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="mega-menu">
+                                        <a href="#">عربي ودولي</a>
+                                        <ul class="mega-menu-bar">
+
+                                            <!--Tab Section-->
+                                            <div class="tab-section">
+                                                <!--Product Tabs-->
+                                                <div class="info-tabs tabs-box">
+                                                    <div class="row clearfix">
+
+                                                        <div class="col-md-2 col-sm-3 col-xs-12">
+                                                            <!--Tab Btns-->
+                                                            <ul class="tab-btns tab-buttons clearfix">
+                                                                <li data-tab="#prod-travel" class="tab-btn active-btn">عرب</li>
+                                                                <li data-tab="#prod-media" class="tab-btn">عالم</li>
+                                                                <li data-tab="#prod-finaces" class="tab-btn">إفريقيا</li>
+                                                                <%--
+                                                                <li data-tab="#prod-media-2" class="tab-btn">Media</li>
+                                                                <li data-tab="#prod-finaces-2" class="tab-btn">Finaces</li>--%>
+                                                            </ul>
+                                                            <a href="#" class="all-cat">عربي ودولي</a>
+                                                        </div>
+                                                        <div class="col-md-10 col-sm-9 col-xs-12">
+                                                            <!--Tabs Container-->
+                                                            <div class="tabs-content">
+
+                                                                <!--Tab / Active Tab-->
+                                                                <div class="tab active-tab" id="prod-travel">
+                                                                    <div class="content">
+
+                                                                        <div class="row clearfix">
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124095050000.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">عرب</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">تدشين 6 منصات لتعزيز آليات التحول الرقمي بالحرمين الشريفين  </a></h3>
+                                                                                        <%--<div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123221147978.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">عرب</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">الحوار الليبي.. اجتماع جديد للجنة الـ«75» بعد المشاورات دون نتائج</a></h3>
+                                                                                        <%--<div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123213009837.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">عرب</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">تحالف دعم الشرعية في اليمن يؤكد تورط مليشيا الحوثيي في هجوم جدة</a></h3>
+                                                                                        <%--<div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <!--Tab-->
+                                                                <div class="tab" id="prod-media">
+                                                                    <div class="content">
+
+                                                                        <div class="row clearfix">
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124102302073.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">عالم</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">طوكيو تسجل 186 إصابة جديدة بفيروس كورونا</a></h3>
+                                                                                        <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124062444447.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">عالم</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">إدارة الخدمات الأمريكية: قرار فوز بايدن يضمن انتقال سلس للسلطة</a></h3>
+                                                                                        <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124095402266.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">عالم</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">فيديو| اشتعال حريق بطائرة بوينج 747 في مطار إسباني</a></h3>
+                                                                                        <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <!--Tab-->
+                                                                <div class="tab" id="prod-finaces">
+                                                                    <div class="content">
+
+                                                                        <div class="row clearfix">
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201122125801847.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">إفريقيا</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">انتخابات بوركينا فاسو| الرئيس كابوري يسعى لولاية ثانية </a></h3>
+                                                                                        <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201122114548524.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">إفريقيا</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">الجيش الإثيوبي يعلن بدء مرحلة الدبابات والمدفعية على مدينة ميكيلي</a></h3>
+                                                                                        <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201120131037612.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">إفريقيا</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">الأمم المتحدة: 32 ألف لاجئ فروا من «تيجراي» إثيوبيا للسودان</a></h3>
+                                                                                        <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <%--                                                            <!--Tab-->
+                                                                <div class="tab" id="prod-media-2">
+                                                                    <div class="content">
+
+                                                                        <div class="row clearfix">
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="images/resource/news-40.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">Travel</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                        <div class="post-date">Nov 24, 2020</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="images/resource/news-41.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">Travel</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                        <div class="post-date">Nov 24, 2020</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="images/resource/news-42.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">Travel</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                        <div class="post-date">Nov 24, 2020</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <!--Tab-->
+                                                                <div class="tab" id="prod-finaces-2">
+                                                                    <div class="content">
+
+                                                                        <div class="row clearfix">
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="images/resource/news-40.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">Travel</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                        <div class="post-date">Nov 24, 2020</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="images/resource/news-42.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">Travel</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                        <div class="post-date">Nov 24, 2020</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--News Block Nine-->
+                                                                            <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                                <div class="inner-box">
+                                                                                    <div class="image">
+                                                                                        <a href="#"><img src="images/resource/news-41.jpg" alt="" /></a>
+                                                                                        <div class="category"><a href="#">Travel</a></div>
+                                                                                    </div>
+                                                                                    <div class="lower-box">
+                                                                                        <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                        <div class="post-date">Nov 24, 2020</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                --%>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </ul>
+                                    </li>
+                                    <li class="mega-menu">
+                                        <a href="##">أقتصاد</a>
+                                        <ul class="mega-menu-bar">
+
+                                            <div class="mega-menu-carousel owl-carousel owl-theme">
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123183210977.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">أقتصاد</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">لأول مرة منذ شهور.. تراجع الذهب عيار 21 لأقل من 800 جنيه</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124050247153.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">أقتصاد</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">سعر الدولار أمام الجنيه في البنوك اليوم 24 نوفمبر</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201112085625186.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">سيارات</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">شاهد.. أمريكا تطلق سيارة جبارة بـ 6 عجلات للطرق الوعرة</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124112655470.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">عقارات</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">تعرف على| أسعار الحديد المحلية بالأسواق الثلاثاء 24 نوفمبر</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124113046987.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">عقارات</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">ننشر أسعار الأسمنت المحلية بالأسواق الثلاثاء 24 نوفمبر</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123190848225.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">سياحة وسفر</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">لعشاق السياحة والطبيعة.. أجمل مزارات علاجية في مصر</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123130735596.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">سياحة وسفر</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">«أم الدنيا»..«صحيفة أمريكية» تشجع على عودة السياحة بمصر في زمن الكورونا</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--News Block Nine-->
+                                                <div class="news-block-nine">
+                                                    <div class="inner-box">
+                                                        <div class="image">
+                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201121025835945.jpg" alt="" /></a>
+                                                            <div class="category"><a href="#">الطاقة</a></div>
+                                                        </div>
+                                                        <div class="lower-box">
+                                                            <h3><a href="#">غلق باب التقديم على عدادات الكهرباء الكودية 30 نوفمبر</a></h3>
+                                                            <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">تحقيقات</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">أخبار الرياضة</a>
+                                        <ul>
+                                            <li><a href="NewsDetails.aspx">الدوري المصري</a></li>
+                                            <li><a href="NewsDetails.aspx">الدوري الأنجليزي</a></li>
+                                            <li><a href="NewsDetails.aspx">الدوري الأسباني</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">أخبار الحوادث</a></li>
+                                    <li><a href="#">فن وثقافة</a> </li>
+
+
+
+                                    <li class="dropdown">
+                                        <a href="##">منوعات</a>
+                                        <ul>
+                                            <li><a href="NewsDetails.aspx">حكايات</a></li>
+                                            <li><a href="NewsDetails.aspx">كلاسيك</a></li>
+                                            <li><a href="NewsDetails.aspx">المرأة والطفل</a></li>
+                                            <li><a href="NewsDetails.aspx">أخبار ميدكال</a></li>
+                                            <li><a href="NewsDetails.aspx">مجتمع</a></li>
+                                            <li><a href="NewsDetails.aspx">كاريكاتير</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">علوم وتكنولوجيا</a>
+                                        <ul>
+                                            <li><a href="NewsDetails.aspx">اتصالات</a></li>
+                                            <li><a href="NewsDetails.aspx">الفضاء</a></li>
+                                            <li><a href="NewsDetails.aspx">سلاح</a></li>
+                                            <li><a href="NewsDetails.aspx">العاب وتطبيقات</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">إنفو جراف</a></li>
+                                    <li><a href="#">تويت بوك</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">المزيد</a>
+                                        <ul>
+                                            <li><a href="#">توك شو</a></li>
+                                            <li><a href="#">أخبار اليوم TV</a></li>
+                                            <li><a href="#">أخبار الصين</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                        <div class="outer-box">
+
+                            <!--Search Box-->
+                            <div class="search-box-outer">
+                                <div class="dropdown">
+                                    <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                    <ul class="dropdown-menu pull-left search-panel" aria-labelledby="dropdownMenu1">
+                                        <li class="panel-outer">
+                                            <div class="form-container">
+                                                <form method="post" action="blog.html#">
+                                                    <div class="form-group">
+                                                        <input type="search" name="field-name" value="" placeholder="Search Here" required>
+                                                        <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Hidden Nav Toggler -->
+                        <div class="nav-toggler ">
+                            <button class="hidden-bar-opener"><span class="icon qb-menu1"></span></button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--End Header Lower-->
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="header-top">
+                    <div class="auto-container">
+                        <div class="clearfix">
+                            <!--Top Left-->
+                            <div class="top-left col-md-8 col-sm-12 col-xs-12" style="float: right; text-align:right;">
+                                <div class="single-item-carousel owl-carousel owl-theme owl-rtl">
+                                    <div class="slide">
+                                        <div class="text"><span style="color: #6dadfa;">أخبار مصر:</span> وزير النقل: إدخال «الواي فاي والشاشات» في جميع القطارات تدريجيا</div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="text"><span style="color: #6dadfa;">حوارات وتحقيقات:</span> «الروضة» قرية الأحزان.. تتحول لـ«أيقونة» التنمية في سيناء</div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="text"> «<span style="color: #6dadfa;">اقتصاد:</span>الريف المصري الجديد» يفتتح مقر البنك الزراعي بالمنطقة الخدمية بالمُغرة</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Top Right-->
+                            <div class="top-right pull-left col-md-4 col-sm-12 col-xs-12">
+
+                                <ul class="social-nav">
+                                    <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="auto-container clearfix">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix" id="bs-example-navbar-collapse-1">
+                            <ul class="navigation clearfix">
+                                <li class="dropdown">
+                                    <a href="#"><i class="fa fa-home" style="font-size:xx-large"></i></a>
+
+                                </li>
+                                <li class="current dropdown">
+                                    <a href="#">مصر</a>
+                                    <ul>
+                                        <li><a href="#">أخبار مصر</a></li>
+                                        <li><a href="header-2.html#">أخبار محافظات</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="mega-menu">
+                                    <a href="#">عربي ودولي</a>
+                                    <ul class="mega-menu-bar">
+
+                                        <!--Tab Section-->
+                                        <div class="tab-section">
+                                            <!--Product Tabs-->
+                                            <div class="info-tabs tabs-box">
+                                                <div class="row clearfix">
+
+                                                    <div class="col-md-2 col-sm-3 col-xs-12">
+                                                        <!--Tab Btns-->
+                                                        <ul class="tab-btns tab-buttons clearfix">
+                                                            <li data-tab="#prod-travel" class="tab-btn active-btn">عرب</li>
+                                                            <li data-tab="#prod-media" class="tab-btn">عالم</li>
+                                                            <li data-tab="#prod-finaces" class="tab-btn">إفريقيا</li>
+                                                            <%--
+                                                            <li data-tab="#prod-media-2" class="tab-btn">Media</li>
+                                                            <li data-tab="#prod-finaces-2" class="tab-btn">Finaces</li>--%>
+                                                        </ul>
+                                                        <a href="#" class="all-cat">عربي ودولي</a>
+                                                    </div>
+                                                    <div class="col-md-10 col-sm-9 col-xs-12">
+                                                        <!--Tabs Container-->
+                                                        <div class="tabs-content">
+
+                                                            <!--Tab / Active Tab-->
+                                                            <div class="tab active-tab" id="prod-travel">
+                                                                <div class="content">
+
+                                                                    <div class="row clearfix">
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124095050000.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">عرب</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">تدشين 6 منصات لتعزيز آليات التحول الرقمي بالحرمين الشريفين  </a></h3>
+                                                                                    <%--<div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123221147978.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">عرب</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">الحوار الليبي.. اجتماع جديد للجنة الـ«75» بعد المشاورات دون نتائج</a></h3>
+                                                                                    <%--<div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123213009837.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">عرب</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">تحالف دعم الشرعية في اليمن يؤكد تورط مليشيا الحوثيي في هجوم جدة</a></h3>
+                                                                                    <%--<div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <!--Tab-->
+                                                            <div class="tab" id="prod-media">
+                                                                <div class="content">
+
+                                                                    <div class="row clearfix">
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124102302073.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">عالم</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">طوكيو تسجل 186 إصابة جديدة بفيروس كورونا</a></h3>
+                                                                                    <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124062444447.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">عالم</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">إدارة الخدمات الأمريكية: قرار فوز بايدن يضمن انتقال سلس للسلطة</a></h3>
+                                                                                    <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124095402266.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">عالم</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">فيديو| اشتعال حريق بطائرة بوينج 747 في مطار إسباني</a></h3>
+                                                                                    <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <!--Tab-->
+                                                            <div class="tab" id="prod-finaces">
+                                                                <div class="content">
+
+                                                                    <div class="row clearfix">
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201122125801847.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">إفريقيا</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">انتخابات بوركينا فاسو| الرئيس كابوري يسعى لولاية ثانية </a></h3>
+                                                                                    <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201122114548524.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">إفريقيا</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">الجيش الإثيوبي يعلن بدء مرحلة الدبابات والمدفعية على مدينة ميكيلي</a></h3>
+                                                                                    <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201120131037612.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">إفريقيا</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">الأمم المتحدة: 32 ألف لاجئ فروا من «تيجراي» إثيوبيا للسودان</a></h3>
+                                                                                    <%--                                                                                    <div class="post-date">Nov 24, 2020</div>--%>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <%--                                                            <!--Tab-->
+                                                            <div class="tab" id="prod-media-2">
+                                                                <div class="content">
+
+                                                                    <div class="row clearfix">
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="images/resource/news-40.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">Travel</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                    <div class="post-date">Nov 24, 2020</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="images/resource/news-41.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">Travel</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                    <div class="post-date">Nov 24, 2020</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="images/resource/news-42.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">Travel</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                    <div class="post-date">Nov 24, 2020</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                            <!--Tab-->
+                                                            <div class="tab" id="prod-finaces-2">
+                                                                <div class="content">
+
+                                                                    <div class="row clearfix">
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="images/resource/news-40.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">Travel</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                    <div class="post-date">Nov 24, 2020</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="images/resource/news-42.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">Travel</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                    <div class="post-date">Nov 24, 2020</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!--News Block Nine-->
+                                                                        <div class="news-block-nine col-md-4 col-sm-6 col-xs-12">
+                                                                            <div class="inner-box">
+                                                                                <div class="image">
+                                                                                    <a href="#"><img src="images/resource/news-41.jpg" alt="" /></a>
+                                                                                    <div class="category"><a href="#">Travel</a></div>
+                                                                                </div>
+                                                                                <div class="lower-box">
+                                                                                    <h3><a href="#">Selena Gomez and Lady Gaga join Billboard campaign to stop violence</a></h3>
+                                                                                    <div class="post-date">Nov 24, 2020</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            --%>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </ul>
+                                </li>
+                                <li class="mega-menu">
+                                    <a href="##">أقتصاد</a>
+                                    <ul class="mega-menu-bar">
+
+                                        <div class="mega-menu-carousel owl-carousel owl-theme">
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123183210977.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">أقتصاد</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">لأول مرة منذ شهور.. تراجع الذهب عيار 21 لأقل من 800 جنيه</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124050247153.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">أقتصاد</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">سعر الدولار أمام الجنيه في البنوك اليوم 24 نوفمبر</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201112085625186.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">سيارات</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">شاهد.. أمريكا تطلق سيارة جبارة بـ 6 عجلات للطرق الوعرة</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124112655470.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">عقارات</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">تعرف على| أسعار الحديد المحلية بالأسواق الثلاثاء 24 نوفمبر</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124113046987.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">عقارات</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">ننشر أسعار الأسمنت المحلية بالأسواق الثلاثاء 24 نوفمبر</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123190848225.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">سياحة وسفر</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">لعشاق السياحة والطبيعة.. أجمل مزارات علاجية في مصر</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123130735596.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">سياحة وسفر</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">«أم الدنيا»..«صحيفة أمريكية» تشجع على عودة السياحة بمصر في زمن الكورونا</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--News Block Nine-->
+                                            <div class="news-block-nine">
+                                                <div class="inner-box">
+                                                    <div class="image">
+                                                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201121025835945.jpg" alt="" /></a>
+                                                        <div class="category"><a href="#">الطاقة</a></div>
+                                                    </div>
+                                                    <div class="lower-box">
+                                                        <h3><a href="#">غلق باب التقديم على عدادات الكهرباء الكودية 30 نوفمبر</a></h3>
+                                                        <%--                                                        <div class="post-date">Nov 24, 2020</div>--%>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#">تحقيقات</a></li>
+                                <li class="dropdown">
+                                    <a href="#">أخبار الرياضة</a>
+                                    <ul>
+                                        <li><a href="NewsDetails.aspx">الدوري المصري</a></li>
+                                        <li><a href="NewsDetails.aspx">الدوري الأنجليزي</a></li>
+                                        <li><a href="NewsDetails.aspx">الدوري الأسباني</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="#">أخبار الحوادث</a></li>
+                                <li><a href="#">فن وثقافة</a> </li>
+
+
+
+                                <li class="dropdown">
+                                    <a href="##">منوعات</a>
+                                    <ul>
+                                        <li><a href="NewsDetails.aspx">حكايات</a></li>
+                                        <li><a href="NewsDetails.aspx">كلاسيك</a></li>
+                                        <li><a href="NewsDetails.aspx">المرأة والطفل</a></li>
+                                        <li><a href="NewsDetails.aspx">أخبار ميدكال</a></li>
+                                        <li><a href="NewsDetails.aspx">مجتمع</a></li>
+                                        <li><a href="NewsDetails.aspx">كاريكاتير</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#">علوم وتكنولوجيا</a>
+                                    <ul>
+                                        <li><a href="NewsDetails.aspx">اتصالات</a></li>
+                                        <li><a href="NewsDetails.aspx">الفضاء</a></li>
+                                        <li><a href="NewsDetails.aspx">سلاح</a></li>
+                                        <li><a href="NewsDetails.aspx">العاب وتطبيقات</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">إنفو جراف</a></li>
+                                <li><a href="#">تويت بوك</a></li>
+                                <li class="dropdown">
+                                    <a href="#">المزيد</a>
+                                    <ul>
+                                        <li><a href="#">توك شو</a></li>
+                                        <li><a href="#">أخبار اليوم TV</a></li>
+                                        <li><a href="#">أخبار الصين</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+                </div>
+            </div>
+            <!--End Sticky Header-->
+
+        </header>
+        <!--End Header Style Two -->
+        <!-- Hidden Navigation Bar -->
+        <section class="hidden-bar left-align">
+
+            <div class="hidden-bar-closer">
+                <button><span class="qb-close-button" style="color: white;"></span></button>
+            </div>
+
+            <!-- Hidden Bar Wrapper -->
+            <div class="hidden-bar-wrapper">
+
+                <!-- .Side-menu -->
+                <div class="side-menu">
+                    <!--navigation-->
+                    <ul class="navigation clearfix">
+                        <li class="dropdown">
+                            <a href="#"><i class="fa fa-home" style="font-size:xx-large"></i></a>
+
+                        </li>
+                        <li class="current dropdown">
+                            <a href="#">مصر</a>
+                            <ul>
+                                <li><a href="#">أخبار مصر</a></li>
+                                <li><a href="#">أخبار محافظات</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">عربي ودولي</a>
+
+                        </li>
+                        <li>
+                            <a href="##">أقتصاد</a>
+
+                        </li>
+                        <li><a href="#">تحقيقات</a></li>
+                        <li class="dropdown">
+                            <a href="#">أخبار الرياضة</a>
+                            <ul>
+                                <li><a href="NewsDetails.aspx">الدوري المصري</a></li>
+                                <li><a href="NewsDetails.aspx">الدوري الأنجليزي</a></li>
+                                <li><a href="NewsDetails.aspx">الدوري الأسباني</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="#">أخبار الحوادث</a></li>
+                        <li><a href="#">فن وثقافة</a> </li>
+
+
+
+                        <li class="dropdown">
+                            <a href="##">منوعات</a>
+                            <ul>
+                                <li><a href="NewsDetails.aspx">حكايات</a></li>
+                                <li><a href="NewsDetails.aspx">كلاسيك</a></li>
+                                <li><a href="NewsDetails.aspx">المرأة والطفل</a></li>
+                                <li><a href="NewsDetails.aspx">أخبار ميدكال</a></li>
+                                <li><a href="NewsDetails.aspx">مجتمع</a></li>
+                                <li><a href="NewsDetails.aspx">كاريكاتير</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">علوم وتكنولوجيا</a>
+                            <ul>
+                                <li><a href="NewsDetails.aspx">اتصالات</a></li>
+                                <li><a href="NewsDetails.aspx">الفضاء</a></li>
+                                <li><a href="NewsDetails.aspx">سلاح</a></li>
+                                <li><a href="NewsDetails.aspx">العاب وتطبيقات</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="NewsDetails.aspx">إنفو جراف</a></li>
+                        <li><a href="NewsDetails.aspx">تويت بوك</a></li>
+                        <li class="dropdown">
+                            <a href="#">المزيد</a>
+                            <ul>
+                                <li><a href="NewsDetails.aspx">توك شو</a></li>
+                                <li><a href="NewsDetails.aspx">أخبار اليوم TV</a></li>
+                                <li><a href="NewsDetails.aspx">أخبار الصين</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.Side-menu -->
+                <!--Options Box-->
+                <div class="options-box">
+
+                    <!--Language Dropdown-->
+                    <div class="language dropdown">
+                        <a class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"> English <span class="icon fa fa-angle-down"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">عربى</a></li>
+                            <li><a href="#">برايل</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Social Links-->
+                    <ul class="social-links clearfix">
+                        <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                    </ul>
+
+                </div>
+
+            </div><!-- / Hidden Bar Wrapper -->
+
+        </section>
+        <!-- End / Hidden Bar -->
+
+
+        @RenderBody()
+
+        <!--Main Footer-->
+        <footer class="main-footer">
+
+
+
+            <!--<div class="widgets-section">
+                <div class="auto-container">
+                    <div class="row clearfix">-->
+            <!--Widget Column / Reviews Widget-->
+            <!--<div class="widget-column col-md-4 col-sm-6 col-xs-12">
+                <div class="footer-widget reviews-widget">
+                    <h2>Popular Reviews</h2>-->
+            <!--Review Block-->
+            <!--<div class="review-block">
+                <div class="inner-box">
+                    <div class="image"><a href="NewsDetails.aspx"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/review-1.jpg" alt="" /></a></div>
+                    <div class="text"><a href="NewsDetails.aspx">A young woman holding a beautiful umbrella in the rain</a></div>
+                    <span class="ratings">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star light"></span>
+                        <span>9.0</span>
+                    </span>
+                </div>
+            </div>-->
+            <!--Review Block-->
+            <!--<div class="review-block">
+                <div class="inner-box">
+                    <div class="image"><a href="NewsDetails.aspx"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/review-2.jpg" alt="" /></a></div>
+                    <div class="text"><a href="NewsDetails.aspx">Study the New Digital Course Developed with Google</a></div>
+                    <span class="ratings">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star light"></span>
+                        <span>9.0</span>
+                    </span>
+                </div>
+            </div>-->
+            <!--Review Block-->
+            <!--<div class="review-block">
+                        <div class="inner-box">
+                            <div class="image"><a href="NewsDetails.aspx"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/review-3.jpg" alt="" /></a></div>
+                            <div class="text"><a href="NewsDetails.aspx">A modern day security strategy for your computer</a></div>
+                            <span class="ratings">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star light"></span>
+                                <span>9.0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>-->
+            <!--Widget Column / Instagram Widget-->
+            <!--<div class="widget-column col-md-4 col-sm-6 col-xs-12">
+                <div class="footer-widget isntagram-widget">
+                    <h2>Instagram Photos</h2>
+                    <div class="clearfix">
+                        <figure class="image"><a href="images/resource/news-1.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-1.jpg" alt=""></a></figure>
+                        <figure class="image"><a href="images/resource/news-2.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-2.jpg" alt=""></a></figure>
+                        <figure class="image"><a href="images/resource/news-3.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-3.jpg" alt=""></a></figure>
+                        <figure class="image"><a href="images/resource/news-4.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-4.jpg" alt=""></a></figure>
+                        <figure class="image"><a href="images/resource/news-1.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-5.jpg" alt=""></a></figure>
+                        <figure class="image"><a href="images/resource/news-2.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-6.jpg" alt=""></a></figure>
+                        <figure class="image"><a href="images/resource/news-3.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-7.jpg" alt=""></a></figure>
+                        <figure class="image"><a href="images/resource/news-4.jpg" class="lightbox-image"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/instagram-8.jpg" alt=""></a></figure>
+                    </div>
+                </div>
+
+                <div class="footer-widget popular-tags">
+                    <h2>Popular Tags</h2>
+                    <a href="#">Design</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Money</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Entertanment</a>
+                    <a href="#">Design</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Pixels</a>
+                    <a href="#">Business</a>
+                    <a href="#">Fashion</a>
+                    <a href="#">Design</a>
+                </div>
+            </div>-->
+            <!--Widget Column / Popular Widget-->
+            <!--<div class="widget-column col-md-4 col-sm-6 col-xs-12">
+                <div class="footer-widget popular-widget">
+                    <h2>Popular Posts</h2>-->
+            <!--News Info-->
+            <!--<div class="news-info">
+                <div class="inner-box">
+                    <div class="image">
+                        <img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/news-post-1.jpg" alt="" />
+                        <a class="overlay" href="NewsDetails.aspx"><span class="icon fa fa-play"></span></a>
+                    </div>
+                    <div class="text"><a href="NewsDetails.aspx">Study the New Digital Course Developed with Google</a></div>
+                    <div class="post-date">March 15, 2016</div>
+                </div>
+            </div>-->
+            <!--News Info-->
+            <!--<div class="news-info">
+                <div class="inner-box">
+                    <div class="image">
+                        <img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/news-post-2.jpg" alt="" />
+                        <a class="overlay" href="NewsDetails.aspx"><span class="icon fa fa-play"></span></a>
+                    </div>
+                    <div class="text"><a href="NewsDetails.aspx">A young woman holding a beautiful umbrella in the rain</a></div>
+                    <div class="post-date">Nov 24, 2020</div>
+                </div>
+            </div>-->
+            <!--News Info-->
+            <!--<div class="news-info">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="images/resource/news-post-3.jpg" alt="" />
+                                            <a class="overlay" href="NewsDetails.aspx"><span class="icon fa fa-play"></span></a>
+                                        </div>
+                                        <div class="text"><a href="NewsDetails.aspx">Gain Essential Creative Project Management Training</a></div>
+                                        <div class="post-date">March 17, 2016</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>-->
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <!--Column-->
+                        <div class="column col-md-3 col-sm-12 col-xs-12">
+                            <div class="logo">
+                                <a href="index.aspx"></a>
+                            </div>
+                        </div>
+                        <!--Column-->
+                        <div class="column col-md-6 col-sm-12 col-xs-12">
+                            <div class="text" style="direction:rtl">تهتم بوابة أخبار اليوم بتقديم الأخبار العاجلة لحظة حدوثها، منفردة بالموضوعات الحصرية والصور والفيديوهات، من خلال شبكة مراسلين داخل وخارج مصر وفي شتى المحافظات، وترفع شعار؛ الخبر الدقيق الموثوق منه.</div>
+                        </div>
+                        <!--Column-->
+                        <div class="column col-md-3 col-sm-12 col-xs-12">
+                            <ul class="social-icon-one">
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li class="twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li class="g_plus"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                <li class="linkedin"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                <li class="pinteret"><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
+                                <li class="android"><a href="#"><span class="fa fa-android"></span></a></li>
+                                <li class="dribbble"><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                                <li class="rss"><a href="#"><span class="fa fa-rss"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Copyright Section-->
+                <div class="copyright-section">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <ul class="footer-nav">
+                                    <li><a href="#">اتصل بنا</a></li>
+                                    <li><a href="#">سياسة الخصوصة</a></li>
+                                    <li><a href="#">من نحن</a></li>
+                                    <li><a href="#">للأعلان</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="copyright">&copy;  © الحقوق محفوظة لمؤسسة أخبار اليوم 1944 - 2020 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Main Footer-->
+
+    </div>
+    <!--End pagewrapper-->
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+    <a href="https://akhbarelyom.com/Landing/index.aspx" target="_blank">
+        <div class="scroll-to-pdf" style="display: block; left: 15px; width: 103px;border-radius: 20px;"><span style="direction: rtl;border: 20px;">PDF إصداراتنا </span></div>
+    </a>
+    </div>
+    <!--End Scroll to top-->
+
+    <script src="~/js/all.min.js"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+

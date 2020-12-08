@@ -1,71 +1,35 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+
+.main-header .nav-toggler {
+    left: 0px;
+    right: unset !important;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+.main-menu .navigation > li {
+    float: right !important;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.outer-box {
+    float: left !important;
+    right: unset !important;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.main-menu .navigation > li > ul > li > a {
+    position: relative;
+    text-align: right !important;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,600,700');
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    font-family: 'Droid Arabic Kufi', serif;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+li, ul, h1, h2, h3, h4, h5, p, h6, a, body {
+    font-family: 'Droid Arabic Kufi', serif;
+    font-weight: normal;
+    font-style: normal;
 }

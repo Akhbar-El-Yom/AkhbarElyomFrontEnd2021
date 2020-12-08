@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "animate.css@4.1.1",
+      "destination": "wwwroot/lib/animate.css/"
+    },
+    {
+      "library": "font-awesome@4.6.1",
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "hover.css@2.3.1",
+      "destination": "wwwroot/lib/hover.css/"
+    },
+    {
+      "library": "jquery-appear@0.1",
+      "destination": "wwwroot/lib/jquery-appear/"
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "jquery-fancybox@3.1.0",
+      "destination": "wwwroot/lib/jquery-fancybox/"
+    },
+    {
+      "library": "jquery-easing@1.4.1",
+      "destination": "wwwroot/lib/jquery-easing/"
+    },
+    {
+      "library": "jquery-mousewheel@3.1.13",
+      "destination": "wwwroot/lib/jquery-mousewheel/"
+    },
+    {
+      "library": "malihu-custom-scrollbar-plugin@3.1.5",
+      "destination": "wwwroot/lib/malihu-custom-scrollbar-plugin/"
+    },
+    {
+      "library": "wow@1.1.2",
+      "destination": "wwwroot/lib/wow/"
+    },
+    {
+      "library": "OwlCarousel2@2.2.0",
+      "destination": "wwwroot/lib/OwlCarousel2/"
+    },
+    {
+      "library": "twitter-bootstrap@3.3.4",
+      "destination": "wwwroot/lib/twitter-bootstrap/"
+    }
+  ]
+}

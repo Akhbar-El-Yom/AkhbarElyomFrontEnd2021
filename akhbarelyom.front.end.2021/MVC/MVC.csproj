@@ -29,4 +29,7 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
+  <Target Name="MyPreCompileTarget" BeforeTargets="Build">
+    <Exec Command="gulp min" />
+  </Target>
 </Project>

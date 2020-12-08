@@ -1,0 +1,45 @@
+[
+  {
+    "outputFileName": "wwwroot/css/vendors.min.css",
+    "inputFiles": [
+      "wwwroot/lib/twitter-bootstrap/css/bootstrap.css",
+      "wwwroot/lib/font-awesome/css/font-awesome.css",
+      "wwwroot/lib/animate.css/animate.css",
+      "wwwroot/lib/OwlCarousel2/assets/owl.carousel.css",
+      "wwwroot/lib/hover.css/css/hover.css",
+      "wwwroot/lib/jquery-fancybox/source/scss/jquery.fancybox.scss",
+      "wwwroot\/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+      "wwwroot/css/style.css",
+      "wwwroot/css/responsive.css",
+      "wwwroot/css/color-themes/default-theme.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/site.css",
+      "wwwroot/style.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/all.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/dist/jquery.min.js",
+      "wwwroot/lib/twitter-bootstrap/js/bootstrap.min.js",
+      "wwwroot/lib/jquery-fancybox/source/js/jquery.fancybox.pack.js",
+      "wwwroot/lib/jquery-fancybox/source/helpers/jquery.fancybox-media.js",
+      "wwwroot/lib/OwlCarousel2/owl.carousel.js",
+      "wwwroot/lib/jquery-appear/jquery.appear.js",
+      "wwwroot/lib/wow/wow.js",
+      "wwwroot/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
+      "wwwroot/js/script.js",
+      "wwwroot/js/color-settings.js",
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

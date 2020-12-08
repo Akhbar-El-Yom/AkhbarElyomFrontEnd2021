@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6V1scBSBcJYbgQkOh+Ot7xN7J1s9F5NKCPoOLga4NWf5gQEyQpD7GvtgNz30HgnP2+YB7aDbXKsPnhRq7CRS7g==",
+  "dgSpecHash": "3TdA3yu4sRe5QH0c4LRljm8esVolVR6AyE051lHq6JXwZgkCV+mYK8HJy0s8OYx2lGB/IuBJ3F3BTivchQcoAQ==",
   "success": true,
   "projectFilePath": "E:\\AkhbarElYom.com\\GitHub\\AkhbarElyomFrontEnd2021\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj",
   "expectedPackageFiles": [
@@ -135,8 +135,7 @@
     "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ahmed\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\ahmed\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
