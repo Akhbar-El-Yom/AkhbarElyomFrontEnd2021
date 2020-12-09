@@ -20,6 +20,7 @@ steps:
   inputs:
     GitRepoUrl: 'https://github.com/ahmedgalal007/AkhbarElyomFrontEnd2021.git'
 
+
 - task: NuGetToolInstaller@1
 
 - task: NodeTool@0
@@ -31,6 +32,7 @@ steps:
     restoreSolution: '$(solution)'
 
 - script: cd akhbarelyom.front.end.2021\MVC && npm install 
+--script: dotnet tool install -g  microsoft.web.librarymanager.cli --version 2.1.113
 
 - task: VSBuild@1
   inputs:
