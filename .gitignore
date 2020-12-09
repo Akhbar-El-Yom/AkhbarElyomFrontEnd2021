@@ -1,10 +1,9 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
-## /akhbarelyom.front.end.2021/MVC/wwwroot/lib
-## /akhbarelyom.front.end.2021/MVC/bin/Debug
-## /akhbarelyom.front.end.2021/MVC/obj
+/akhbarelyom.front.end.2021/MVC/wwwroot/lib/*
+/akhbarelyom.front.end.2021/MVC/bin/
+/akhbarelyom.front.end.2021/MVC/obj
 ## /.vs
 
 ## Ignore Visual Studio temporary files, build results, and
