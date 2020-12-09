@@ -46,6 +46,10 @@
     {
       "library": "twitter-bootstrap@3.3.4",
       "destination": "wwwroot/lib/twitter-bootstrap/"
+    },
+    {
+      "library": "jquery@2.2.4",
+      "destination": "wwwroot/lib/jquery/"
     }
   ]
 }

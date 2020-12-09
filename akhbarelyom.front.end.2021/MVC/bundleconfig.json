@@ -24,7 +24,7 @@
   {
     "outputFileName": "wwwroot/js/all.min.js",
     "inputFiles": [
-      "wwwroot/lib/jquery/dist/jquery.min.js",
+      "wwwroot/lib/jquery/jquery.min.js",
       "wwwroot/lib/twitter-bootstrap/js/bootstrap.min.js",
       "wwwroot/lib/jquery-fancybox/source/js/jquery.fancybox.pack.js",
       "wwwroot/lib/jquery-fancybox/source/helpers/jquery.fancybox-media.js",
