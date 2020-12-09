@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\AkhbarElYom.com\\GitHub\\AkhbarElyomFrontEnd2021\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj": {}
+    "E:\\AkhbarElYom.com\\Azure\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj": {}
   },
   "projects": {
-    "E:\\AkhbarElYom.com\\GitHub\\AkhbarElyomFrontEnd2021\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj": {
+    "E:\\AkhbarElYom.com\\Azure\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\AkhbarElYom.com\\GitHub\\AkhbarElyomFrontEnd2021\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj",
+        "projectUniqueName": "E:\\AkhbarElYom.com\\Azure\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj",
         "projectName": "MVC",
-        "projectPath": "E:\\AkhbarElYom.com\\GitHub\\AkhbarElyomFrontEnd2021\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj",
+        "projectPath": "E:\\AkhbarElYom.com\\Azure\\akhbarelyom.front.end.2021\\MVC\\MVC.csproj",
         "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-        "outputPath": "E:\\AkhbarElYom.com\\GitHub\\AkhbarElyomFrontEnd2021\\akhbarelyom.front.end.2021\\MVC\\obj\\",
+        "outputPath": "E:\\AkhbarElYom.com\\Azure\\akhbarelyom.front.end.2021\\MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -53,11 +53,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",
@@ -67,11 +67,15 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[5.0.1, )"
             },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.9, )"
+            },
+            "Microsoft.Web.LibraryManager.Build": {
+              "target": "Package",
+              "version": "[2.1.113, )"
             }
           },
           "imports": [
