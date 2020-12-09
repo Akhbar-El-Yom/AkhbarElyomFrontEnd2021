@@ -21,6 +21,12 @@ steps:
     GitRepoUrl: 'https://github.com/ahmedgalal007/AkhbarElyomFrontEnd2021.git'
 
 
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      dotnet tool install -g  microsoft.web.librarymanager.cli --version 2.1.113
+
 - task: NuGetToolInstaller@1
 
 - task: NodeTool@0
@@ -33,9 +39,6 @@ steps:
 
 - script: cd akhbarelyom.front.end.2021\MVC && npm install 
 
---task: DotNetCoreCLI@2
---inputs:
-----command: 'tool install -g  microsoft.web.librarymanager.cli --version 2.1.113'
 
 - task: VSBuild@1
   inputs:
