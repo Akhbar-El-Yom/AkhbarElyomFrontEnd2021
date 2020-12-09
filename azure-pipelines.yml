@@ -30,7 +30,7 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- script: dir && cd MVC && npm install 
+- script: cd akhbarelyom.front.end.2021\MVC && npm install 
 
 - task: VSBuild@1
   inputs:
