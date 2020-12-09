@@ -33,3 +33,8 @@ li, ul, h1, h2, h3, h4, h5, p, h6, a, body {
     font-weight: normal;
     font-style: normal;
 }
+
+.main-menu .navigation > li > ul {
+    right: 0;
+    left: unset;
+}
