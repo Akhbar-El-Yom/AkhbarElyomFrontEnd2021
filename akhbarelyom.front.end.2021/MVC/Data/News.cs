@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -9,6 +11,8 @@ namespace MVC.Data
     {
         public int NewId { get; set; }
         public int SectionId { get; set; }
+        // [ForeignKey("NewsSection")]
+        public virtual MainSection Section { get; set; }
         public int? CategoryId { get; set; }
         public int? ParentId { get; set; }
         public int? NewsType { get; set; }
@@ -20,7 +24,11 @@ namespace MVC.Data
         public string Quote { get; set; }
         public string Keywords { get; set; }
         public int? PictureId1 { get; set; }
+        // [ForeignKey("NewsPicture")]
+        public virtual NewsPicture Picture1 { get; set; }
         public int? PictureId2 { get; set; }
+        // [ForeignKey("NewsPicture")]
+        public virtual NewsPicture Picture2 { get; set; }
         public string PictureCaption1 { get; set; }
         public string PictureCaption2 { get; set; }
         public DateTime? PublishDate { get; set; }
@@ -58,5 +66,7 @@ namespace MVC.Data
         public int? SectionId9 { get; set; }
         public int? EditAfterRejectFlag { get; set; }
         public string Seotitle { get; set; }
+
+        public virtual TopNews TopNews { get; set; }
     }
 }

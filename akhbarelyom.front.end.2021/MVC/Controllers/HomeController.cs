@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MVC.Data;
 using MVC.Models;
+using MVC.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,18 +15,19 @@ namespace MVC.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly AppDbContext _db;
+        private readonly IDAL _dal;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext db)
+        public HomeController(ILogger<HomeController> logger, IDAL dal)
         {
             _logger = logger;
-            _db = db;
+            _dal = dal;
         }
 
         public IActionResult Index()
         {
-            var N = _db.NewsCategories.ToList();
-            return View();
+            var M = _dal.GetHome().HomeTopStories;
+
+            return View(M);
         }
 
         public IActionResult Privacy()
