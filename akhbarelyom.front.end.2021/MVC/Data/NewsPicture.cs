@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -15,5 +16,9 @@ namespace MVC.Data
         public DateTime? AddedDate { get; set; }
         public byte? Source { get; set; }
         public int? JournalId { get; set; }
+
+        public virtual ICollection<News> Picture1News { get; set; }
+        public virtual ICollection<News> Picture2News { get; set; }
+
     }
 }

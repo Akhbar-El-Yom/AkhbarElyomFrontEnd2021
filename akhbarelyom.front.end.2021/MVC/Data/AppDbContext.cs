@@ -639,8 +639,15 @@ namespace MVC.Data
                 entity.Property(e => e.JournalId).HasColumnName("JournalID");
             });
 
+        //    modelBuilder.Entity<MainSection>()
+        //.HasOne(a => a.ParentSection).WithMany(b => b.SubSections)
+        //.HasForeignKey<SubSection>(e => e.SectionId);
+        //    modelBuilder.Entity<MainSection>().ToTable("MainSections");
+        //    modelBuilder.Entity<SubSection>().ToTable("MainSections");
+
             modelBuilder.Entity<MainSection>(entity =>
             {
+                entity.HasOne(e => e.ParentSection).WithMany(e => e.SubSections).HasForeignKey(e => e.ParentSectionId).HasPrincipalKey(e => e.SectionId);
                 entity.HasKey(e => e.SectionId)
                     .HasName("PK_Sports");
 
@@ -836,6 +843,10 @@ namespace MVC.Data
 
             modelBuilder.Entity<News>(entity =>
             {
+                entity.HasOne(e => e.Picture1).WithMany(e => e.Picture1News).HasForeignKey(PN => PN.PictureId1);
+                entity.HasOne(e => e.Picture2).WithMany(e => e.Picture2News).HasForeignKey(PN => PN.PictureId2);
+                entity.HasOne(e => e.Section).WithMany(e => e.News).HasForeignKey(NS => NS.SectionId);
+
                 entity.HasKey(e => e.NewId)
                     .HasName("PK_News2");
 
@@ -1872,6 +1883,10 @@ namespace MVC.Data
 
             modelBuilder.Entity<TopNews>(entity =>
             {
+                entity.HasOne(e => e.News).WithOne(N => N.TopNews).HasForeignKey<TopNews>(TN => TN.NewsId); //.HasPrincipalKey<News>(N => N.NewId);
+                entity.HasOne(e => e.Section).WithMany(NS => NS.TopNews).HasForeignKey(e => e.SecId);
+                entity.HasOne(e => e.NewsCategory).WithMany(NC => NC.TopNews).HasForeignKey(e => e.CatId);
+
                 entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.CatId).HasColumnName("CatID");

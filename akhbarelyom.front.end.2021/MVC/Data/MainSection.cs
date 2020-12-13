@@ -21,10 +21,26 @@ namespace MVC.Data
         public string Keywords { get; set; }
         public string Description { get; set; }
         public int? AppDisplayOrder { get; set; }
+
         public int? ParentSectionId { get; set; }
+        public virtual MainSection ParentSection { get; set; }
+
         public int? LevelNo { get; set; }
         public DateTime? CreationDate { get; set; }
 
+        public virtual ICollection<MainSection> SubSections { get; set; }
+
         public virtual ICollection<NewsSection> NewsSections { get; set; }
+        public virtual ICollection<TopNews> TopNews { get; set; }
+        public virtual ICollection<News> News { get; set; }
+
+
+    }
+    public partial class SubSection : MainSection
+    {
+        public SubSection():base()
+        {
+
+        }
     }
 }

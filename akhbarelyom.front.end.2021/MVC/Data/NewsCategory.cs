@@ -11,5 +11,8 @@ namespace MVC.Data
         public string Name { get; set; }
         public int DisplayOrder { get; set; }
         public DateTime? CreationDate { get; set; }
+
+        public virtual ICollection<TopNews> TopNews { get; set; }
+
     }
 }
