@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Views\Shared\Sections\" />
   </ItemGroup>
 
   

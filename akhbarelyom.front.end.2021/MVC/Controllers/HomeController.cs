@@ -25,7 +25,8 @@ namespace MVC.Controllers
 
         public IActionResult Index()
         {
-            var M = _dal.GetHome().HomeTopStories;
+            var s = _dal.GetHome().HomeLatestNews;
+            var M = _dal.GetHome().Slider;
 
             return View(M);
         }

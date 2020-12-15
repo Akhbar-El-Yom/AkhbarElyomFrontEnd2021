@@ -1,8 +1,11 @@
-﻿@{
+﻿@inject MVC.Services.IDAL _DAL;
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center" style="min-height:500px;">
+@*<div class="text-center" style="min-height:500px;">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+</div>*@
+
+<partial name="Sliders/_OwlHomeSlider" model="@_DAL.GetHome().Slider" />

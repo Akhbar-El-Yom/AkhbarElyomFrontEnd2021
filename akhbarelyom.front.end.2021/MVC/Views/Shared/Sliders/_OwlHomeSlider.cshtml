@@ -1,0 +1,83 @@
+﻿@model List<MVC.Data.News>
+
+<!--Main Slider Two-->
+<section class="main-slider-two">
+
+    <div class="single-item-carousel owl-carousel owl-theme">
+        @{int idx = 0, slidesCount = 5; }
+        @for (int slide = 1; slide < Model.Count() + 1; slide = slide + slidesCount)
+        {
+            bool AddSecondCol = false;
+
+            <!--Slide-->
+            <div class="slide">
+                <div class="clearfix">
+                    @for (int slideCol = slide; slideCol < (slide + slidesCount) && slideCol < Model.Count() + 1; slideCol++)
+                    {
+
+                        if (slideCol == slide)
+                        {
+                            @Html.Raw("<!--Slide Column Start-->\n")
+                            @Html.Raw("<div class=\"slide-column col-md-6 col-sm-12 col-xs-12\">\n")
+                            <!--News Block Three-->
+                            <div class="news-block-three style-two">
+                                <div class="inner-box">
+                                    <div class="image">
+                                        <img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="https://images.akhbarelyom.com/images/images/large/@Model[slideCol-1].Picture1.PictureName" alt="@Model[slideCol-1].Title" />
+                                        <div class="overlay-box">
+                                            <div class="content">
+                                                <div class="tag"><a href="NewsDetails.aspx">@Model[slideCol - 1].Section.SecTitle</a></div>
+                                                <h3 style="text-align: right"><a href="NewsDetails.aspx">@Model[slideCol - 1].Title</a></h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @Html.Raw("</div>\n")
+                            @Html.Raw("<!--Slide Column End-->\n")
+                            AddSecondCol = true;
+
+                        }
+                        else if (slideCol > slide)
+                        {
+                            @if (AddSecondCol)
+                            {
+                                @Html.Raw("<!--Slide Column Start-->\n")
+                                @Html.Raw("<div class=\"slide-column col-md-6 col-sm-12 col-xs-12\">\n")
+                                @Html.Raw("<div class=\"row clearfix\">\n")
+
+                                AddSecondCol = false;
+                            }
+                            <div class="inner-slide col-md-6 col-sm-6 col-xs-12">
+                                <!--News Block Three-->
+                                <div class="news-block-three style-four">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="500ms" src="https://images.akhbarelyom.com/images/images/large/@Model[slideCol-1].Picture1.PictureName" alt="@Model[slideCol-1].Title" />
+                                            <div class="overlay-box">
+                                                <div class="content">
+                                                    <div class="tag"><a href="NewsDetails.aspx">@Model[slideCol - 1].Section.SecTitle</a></div>
+                                                    <h3 style="text-align: right"><a href="NewsDetails.aspx">@Model[slideCol - 1].Title</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                    @Html.Raw("</div>\n")
+                    @Html.Raw("</div>\n")
+                    @Html.Raw("<!--Slide Column End-->\n")
+
+
+                </div>
+            </div>
+        }
+
+    </div>
+
+</section>
+<!--End Main Slider Two-->
