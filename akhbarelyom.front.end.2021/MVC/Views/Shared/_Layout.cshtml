@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@inject MVC.Services.IDAL _dal;
+
+
+<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="utf-8">
@@ -30,9 +33,11 @@
                 <div class="auto-container">
                     <div class="clearfix">
                         <!--Top Left-->
+                       
+
                         <div class="top-left col-md-8 col-sm-12 col-xs-12" style="float: right; text-align:right;">
                             <div class="single-item-carousel owl-carousel owl-theme owl-rtl">
-                                <div class="slide">
+                                @*<div class="slide">
                                     <div class="text"><span style="color: #6dadfa;">أخبار مصر:</span> وزير النقل: إدخال «الواي فاي والشاشات» في جميع القطارات تدريجيا</div>
                                 </div>
                                 <div class="slide">
@@ -40,7 +45,18 @@
                                 </div>
                                 <div class="slide">
                                     <div class="text"> «<span style="color: #6dadfa;">اقتصاد:</span>الريف المصري الجديد» يفتتح مقر البنك الزراعي بالمنطقة الخدمية بالمُغرة</div>
-                                </div>
+                                </div>*@
+
+                                @{
+                                    foreach (var item in _dal.GetLayout().NewsTickers)
+                                    {
+
+                                        <div class="slide">
+                                            <div class="text"><span style="color: #6dadfa;">@item.Section.SecTitle</span> @item.Title</div>
+                                        </div>
+
+                                    }
+                                }
                             </div>
                         </div>
                         <!--Top Right-->

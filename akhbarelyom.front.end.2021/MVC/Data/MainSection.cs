@@ -33,6 +33,7 @@ namespace MVC.Data
         public virtual ICollection<NewsSection> NewsSections { get; set; }
         public virtual ICollection<TopNews> TopNews { get; set; }
         public virtual ICollection<News> News { get; set; }
+        public virtual ICollection<NewsTicker> NewsTickers { get; set; }
 
 
     }

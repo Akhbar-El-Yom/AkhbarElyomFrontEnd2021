@@ -1231,6 +1231,7 @@ namespace MVC.Data
 
             modelBuilder.Entity<NewsTicker>(entity =>
             {
+                entity.HasOne(e => e.Section).WithMany(N => N.NewsTickers).HasForeignKey(e => e.SectionId); //.HasPrincipalKey<News>(N => N.NewId);
                 entity.HasKey(e => e.NewId);
 
                 entity.ToTable("NewsTicker");

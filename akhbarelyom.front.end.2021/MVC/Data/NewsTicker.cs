@@ -13,6 +13,7 @@ namespace MVC.Data
         public DateTime? AddedDate { get; set; }
         public int? JournalId { get; set; }
         public int? SectionId { get; set; }
+        public virtual MainSection Section { get; set; }
         public DateTime? CreationDate { get; set; }
     }
 }

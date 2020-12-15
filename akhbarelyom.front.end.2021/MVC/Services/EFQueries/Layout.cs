@@ -17,5 +17,7 @@ namespace MVC.Services.EFQueries
 
         public List<MainSection> sections => _db.MainSections.Include(ms => ms.SubSections).ToList();
 
+        public List<NewsTicker> NewsTickers => _db.NewsTickers.Include(ms => ms.Section).Where(e => e.SectionId > 0 ).OrderByDescending(e => e.AddedDate).Take(10).ToList();
+
     }
 }
