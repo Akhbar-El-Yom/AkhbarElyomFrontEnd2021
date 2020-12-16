@@ -1,0 +1,232 @@
+﻿
+@model MVC.Data.MainSection
+<!--أخبار مصر-->
+<!--Sidebar Page Container-->
+<div class="sidebar-page-container change-padding">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!--Content Side-->
+            <div class="content-side pull-right col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                <!--Category Tabs Box-->
+                <div class="category-tabs-box">
+                    <!--Product Tabs-->
+                    <div class="prod-tabs tabs-box">
+
+                        <!--Tab Btns-->
+                        <div class="tab-btns tab-buttons clearfix">
+                            <div class="pull-right">
+                                <div class="category" style="font-weight: 600;font-size: 21px;">@Model.SecTitle</div>
+                            </div>
+                            <div class="pull-left">
+                                <div>
+                                    <div data-tab="#section_@Model.SectionId" class="tab-btn active-btn" @*style="color: #e73f43;"*@>@Model.SecTitle</div>
+
+                                    @foreach (var tab in Model.SubSections)
+                                    {
+                                        <div data-tab="#section_@tab.SectionId" class="tab-btn">@tab.SecTitle</div>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--Tabs Container-->
+                        <div class="tabs-content">
+
+                            <!--Main Tab-->
+                            <div class="tab active-tab" id="section_@Model.SectionId">
+                                <div class="content">
+                                    <div class="row clearfix">
+
+                                        <div class="column col-md-6 col-sm-6 col-xs-12">
+                                            @{ var i = 1;}
+                                            @foreach (var TN1 in Model.TopNews.Take(6))
+                                            {
+                                                if (i % 2 == 1)
+                                                {
+                                                    if (i == 1)
+                                                    {
+                                                        <!--News Block Two-->
+                                                        <div class="news-block-two with-margin">
+                                                            <div class="inner-box">
+                                                                <div class="image">
+                                                                    <a href="NewsDetails.aspx"><img data-wow-delay="0ms" data-wow-duration="500ms" src="https://images.akhbarelyom.com/images/images/large/@TN1.News.Picture1.PictureName" alt="" /></a>
+                                                                    <div class="category"><a href="NewsDetails.aspx">@Model.SecTitle</a></div>
+                                                                </div>
+                                                                <div class="lower-box">
+                                                                    <h3><a href="NewsDetails.aspx">@TN1.News.Title</a></h3>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <!--Widget Post-->
+                                                        <article class="widget-post">
+                                                            <figure class="post-thumb">
+                                                                <a href="NewsDetails.aspx">
+                                                                    <img data-wow-delay="0ms" data-wow-duration="500ms" src="https://Images.akhbarelyom.com/images/images/small/@TN1.News.Picture1.PictureName" alt="">
+                                                                </a>
+
+                                                            </figure>
+                                                            <div class="text"><a href="NewsDetails.aspx">@TN1.News.Title</a></div>
+
+                                                        </article>
+                                                    }
+                                                }
+                                                i++;
+                                            }
+                                        </div>
+
+                                        <div class="column col-md-6 col-sm-6 col-xs-12">
+                                            @{ i = 1;}
+                                            @foreach (var TN1 in Model.TopNews.Take(6))
+                                            {
+                                                if (i % 2 == 0)
+                                                {
+                                                    if (i == 2)
+                                                    {
+                                                        <!--News Block Two-->
+                                                        <div class="news-block-two with-margin">
+                                                            <div class="inner-box">
+                                                                <div class="image">
+                                                                    <a href="NewsDetails.aspx"><img data-wow-delay="0ms" data-wow-duration="500ms" src="https://images.akhbarelyom.com/images/images/large/@TN1.News.Picture1.PictureName" alt="" /></a>
+                                                                    <div class="category"><a href="NewsDetails.aspx">@Model.SecTitle</a></div>
+                                                                </div>
+                                                                <div class="lower-box">
+                                                                    <h3><a href="NewsDetails.aspx">@TN1.News.Title</a></h3>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <!--Widget Post-->
+                                                        <article class="widget-post">
+                                                            <figure class="post-thumb">
+                                                                <a href="NewsDetails.aspx">
+                                                                    <img data-wow-delay="0ms" data-wow-duration="500ms" src="https://Images.akhbarelyom.com/images/images/small/@TN1.News.Picture1.PictureName" alt="">
+                                                                </a>
+
+                                                            </figure>
+                                                            <div class="text"><a href="NewsDetails.aspx">@TN1.News.Title</a></div>
+
+                                                        </article>
+                                                    }
+                                                }
+                                                i++;
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Main Tab End-->
+
+
+                            @foreach (var tab in Model.SubSections)
+                            {
+
+                                <!--Tab-->
+                                <div class="tab" id="section_@tab.SectionId">
+                                    <div class="content">
+                                        <div class="row clearfix">
+
+                                            <div class="column col-md-6 col-sm-6 col-xs-12">
+                                                @{ i = 1;}
+                                                @foreach (var TN1 in tab.TopNews.Take(6))
+                                                {
+                                                    if (i % 2 == 1)
+                                                    {
+                                                        if (i == 1)
+                                                        {
+                                                            <!--News Block Two-->
+                                                            <div class="news-block-two with-margin">
+                                                                <div class="inner-box">
+                                                                    <div class="image">
+                                                                        <a href="NewsDetails.aspx"><img data-wow-delay="0ms" data-wow-duration="500ms" src="https://images.akhbarelyom.com/images/images/large/@TN1.News.Picture1.PictureName" alt="" /></a>
+                                                                        <div class="category"><a href="NewsDetails.aspx">@tab.SecTitle</a></div>
+                                                                    </div>
+                                                                    <div class="lower-box">
+                                                                        <h3><a href="NewsDetails.aspx">@TN1.News.Title</a></h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                        else
+                                                        {
+                                                            <!--Widget Post-->
+                                                            <article class="widget-post">
+                                                                <figure class="post-thumb">
+                                                                    <a href="NewsDetails.aspx">
+                                                                        <img data-wow-delay="0ms" data-wow-duration="500ms" src="https://Images.akhbarelyom.com/images/images/small/@TN1.News.Picture1.PictureName" alt="">
+                                                                    </a>
+
+                                                                </figure>
+                                                                <div class="text"><a href="NewsDetails.aspx">@TN1.News.Title</a></div>
+
+                                                            </article>
+                                                        }
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+
+                                            <div class="column col-md-6 col-sm-6 col-xs-12">
+                                                @{ i = 1;}
+                                                @foreach (var TN1 in tab.TopNews.Take(6))
+                                                {
+                                                    if (i % 2 == 0)
+                                                    {
+                                                        if (i == 2)
+                                                        {
+                                                            <!--News Block Two-->
+                                                            <div class="news-block-two with-margin">
+                                                                <div class="inner-box">
+                                                                    <div class="image">
+                                                                        <a href="NewsDetails.aspx"><img data-wow-delay="0ms" data-wow-duration="500ms" src="https://images.akhbarelyom.com/images/images/large/@TN1.News.Picture1.PictureName" alt="" /></a>
+                                                                        <div class="category"><a href="NewsDetails.aspx">@tab.SecTitle</a></div>
+                                                                    </div>
+                                                                    <div class="lower-box">
+                                                                        <h3><a href="NewsDetails.aspx">@TN1.News.Title</a></h3>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                        else
+                                                        {
+                                                            <!--Widget Post-->
+                                                            <article class="widget-post">
+                                                                <figure class="post-thumb">
+                                                                    <a href="NewsDetails.aspx">
+                                                                        <img data-wow-delay="0ms" data-wow-duration="500ms" src="https://Images.akhbarelyom.com/images/images/small/@TN1.News.Picture1.PictureName" alt="">
+                                                                    </a>
+
+                                                                </figure>
+                                                                <div class="text"><a href="NewsDetails.aspx">@TN1.News.Title</a></div>
+
+                                                            </article>
+                                                        }
+                                                    }
+                                                    i++;
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Tab End-->
+                            }
+                        </div>
+                        <!--Tabs Container End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Sidebar Page Container-->
