@@ -37,7 +37,13 @@ namespace MVC.Services.EFQueries
                                     .OrderByDescending(TN => TN.News.PublishDate)
                                     .ToList();
 
-         
+        public List<News> SectionTap => _db.News.Include(TN => TN.Section)
+                                    .Include(N => N.Picture1)
+                                    .Include(N => N.Picture2)
+                                    .Where(TN => TN.JournalId == 1 && TN.SectionId == 1 && TN.CategoryId == 1 && TN.Approved == 1 && TN.NewStatus == 7)
+                                    .OrderByDescending (TN => TN.NewId).Take(5).ToList();
+
+
 
 
     }

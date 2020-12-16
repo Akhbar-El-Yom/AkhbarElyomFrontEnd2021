@@ -18,7 +18,7 @@ namespace MVC.Services.EFQueries
 
         public List<MainSection> sections => _db.MainSections.Where(P => P.ParentSectionId == 0 && P.Hide == 0)
             .Include(e => e.ParentSection)
-                .ThenInclude(ss => ss.SubSections.Where(SS => !SS.DisplayOrder.HasValue))
+                .ThenInclude(ss => ss.SubSections.Where(SS => !SS.DisplayOrder.HasValue)).OrderBy(e => e.DisplayOrder)
             .ToList();
 
         //public List<MainSection> sections => _db.Set<MainSection>().Where(e => e.Hide == 0).ToList().Select(C =>
@@ -35,7 +35,7 @@ namespace MVC.Services.EFQueries
 
         public List<NewsTicker> NewsTickers => _db.NewsTickers.Include(ms => ms.Section).Where(e => e.SectionId > 0 ).OrderByDescending(e => e.AddedDate).Take(10).ToList();
 
-        public List<NewsTicker> NewsTickers => _db.NewsTickers.Include(ms => ms.Section).Where(e => e.SectionId > 0 ).OrderByDescending(e => e.AddedDate).Take(10).ToList();
+        //public List<NewsTicker> NewsTickers => _db.NewsTickers.Include(ms => ms.Section).Where(e => e.SectionId > 0 ).OrderByDescending(e => e.AddedDate).Take(10).ToList();
 
     }
 }
