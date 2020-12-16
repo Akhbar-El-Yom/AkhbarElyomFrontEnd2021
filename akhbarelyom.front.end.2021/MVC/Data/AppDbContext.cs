@@ -647,9 +647,13 @@ namespace MVC.Data
 
             modelBuilder.Entity<MainSection>(entity =>
             {
-                entity.HasOne(e => e.ParentSection).WithMany(e => e.SubSections).HasForeignKey(e => e.ParentSectionId).HasPrincipalKey(e => e.SectionId);
+
+                //entity.HasMany<MainSection>(e => e.SubSections).WithOne(e => e.ParentSection).HasForeignKey(e => e.ParentSectionId).HasPrincipalKey(e => e.SectionId);
+                
                 entity.HasKey(e => e.SectionId)
                     .HasName("PK_Sports");
+
+                entity.HasOne<MainSection>(e => e.ParentSection).WithMany(e => e.SubSections).HasForeignKey(entity => entity.ParentSectionId).HasPrincipalKey(e => e.SectionId);
 
                 entity.Property(e => e.SectionId).HasColumnName("SectionID");
 

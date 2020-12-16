@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -10,6 +11,10 @@ namespace MVC.Data
         public MainSection()
         {
             NewsSections = new HashSet<NewsSection>();
+            SubSections = new HashSet<MainSection>();
+            TopNews = new HashSet<TopNews>();
+            News = new HashSet<News>();
+            NewsTickers = new HashSet<NewsTicker>();
         }
 
         public int SectionId { get; set; }
@@ -23,12 +28,14 @@ namespace MVC.Data
         public int? AppDisplayOrder { get; set; }
 
         public int? ParentSectionId { get; set; }
+
+        //[ForeignKey("ParentSectionId")]
         public virtual MainSection ParentSection { get; set; }
 
         public int? LevelNo { get; set; }
         public DateTime? CreationDate { get; set; }
 
-        public virtual ICollection<MainSection> SubSections { get; set; }
+        public ICollection<MainSection> SubSections { get; set; }
 
         public virtual ICollection<NewsSection> NewsSections { get; set; }
         public virtual ICollection<TopNews> TopNews { get; set; }
@@ -37,11 +44,11 @@ namespace MVC.Data
 
 
     }
-    public partial class SubSection : MainSection
-    {
-        public SubSection():base()
-        {
+    //public partial class SubSection : MainSection
+    //{
+    //    public SubSection():base()
+    //    {
 
-        }
-    }
+    //    }
+    //}
 }
