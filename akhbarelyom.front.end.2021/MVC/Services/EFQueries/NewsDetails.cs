@@ -1,4 +1,5 @@
-﻿using MVC.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using MVC.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace MVC.Services.EFQueries
         {
             _db = dbContext;
         }
+        public News GetNewsItem(int NewsId) => _db.News.Include(e => e.Section).Include(e => e.Picture1).Where(e => e.NewId == NewsId).Single();  
     }
 }
