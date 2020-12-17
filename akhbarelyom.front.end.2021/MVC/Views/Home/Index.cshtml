@@ -4,11 +4,14 @@
 }
 
 @*<div class="text-center" style="min-height:500px;">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>*@
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
 
 <partial name="Sliders/_OwlHomeSlider" model="@_DAL.GetHome().Slider" />
 
 @* SectionId = 1 أخبار مصر  *@
 <partial name="Section/_SubSecTwoColMainAnd2Small" model="@_DAL.GetLayout().sections.ToList().Single(e => e.SectionId == 1)" />
+
+@* SectionId = 1 أخبار الرياضة  *@
+<partial name="Section/_SubSecTwoColMainAnd2Small" model="@_DAL.GetLayout().sections.ToList().Single(e => e.SectionId == 23)" />
