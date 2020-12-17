@@ -1,0 +1,39 @@
+﻿@model List<MVC.Data.News>;
+@{
+}
+
+
+
+
+
+
+<!--Featured Block Section-->
+<section class="featured-block-section">
+
+    <div class="single-item-carousel owl-carousel owl-theme">
+
+
+        @foreach (var item in Model)
+        {
+            <!--News Block Three-->
+            <div class="news-block-three style-three">
+                <div class="inner-box">
+                    <div class="image">
+                        <img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="https://images.akhbarelyom.com/images/images/large/@item.Picture1.PictureName" alt="" />
+                        <div class="overlay-box">
+                            <div class="content">
+                                <div class="tag"><a href="NewsDetails.aspx">@item.Section.SecTitle</a></div>
+                                <h3><a href="NewsDetails.aspx">@item.Title</a></h3>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+</section>
+<!--End Featured Block Section-->
