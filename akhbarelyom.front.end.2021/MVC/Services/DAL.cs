@@ -14,12 +14,15 @@ namespace MVC.Services
         private readonly Home home;
         private readonly Layout layout;
         private readonly NewsDetails news;
+
+        private readonly Services.EFQueries.Section NSection;
         public DAL(AppDbContext dbContext)
         {
             _db = dbContext;
             home = new Home(_db);
             layout = new Layout(_db);
             news = new NewsDetails(_db);
+            NSection = new Section(_db);
         }
 
         public Home GetHome()
@@ -36,5 +39,12 @@ namespace MVC.Services
         {
             return news;
         }
+
+        public Section GetNewsSection()
+        {
+            return NSection;
+        }
+
+
     }
 }

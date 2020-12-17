@@ -12,5 +12,7 @@ namespace MVC.Services
         Home GetHome();
         Layout GetLayout();
         NewsDetails GetNews();
+
+        Section GetNewsSection();
     }
 }

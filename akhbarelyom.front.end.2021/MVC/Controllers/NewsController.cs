@@ -36,6 +36,20 @@ namespace MVC.Controllers
             return View(a);
         }
 
+        public IActionResult newssection(int Id)
+        {
+            List<News> a;
+            try
+            {
+                a = _dal.GetNewsSection().GetSectionItem2(Id);
+            }
+            catch (Exception e)
+            {
+                string es = e.Message;
+                return RedirectToAction("error404");
+            }
+            return View(a);
+        }
         public IActionResult error404()
         {
             return View();
