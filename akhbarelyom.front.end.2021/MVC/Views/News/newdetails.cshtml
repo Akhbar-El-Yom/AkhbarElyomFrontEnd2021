@@ -1,9 +1,381 @@
-﻿@model MVC.Data.News;
+﻿@inject MVC.Services.IDAL _DAL;
+@model MVC.Data.News;
+@using System.Web;
 @{
 }
 
-<h1>@Model.Title</h1>
-<h1>@Model.Section?.SecTitle</h1>
-<h1>@Model.Picture1.PictureName</h1>
+@section head {
+
+
+
+
+
+
+    <script src="/cdn-cgi/apps/head/QEDZsYErF6H3Et1zx-GZ1frLCCg.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FKKR3BH3S" type="f42ab2d1ca0d2d09cbd5740a-text/javascript"></script>
+    <script type="f42ab2d1ca0d2d09cbd5740a-text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2FKKR3BH3S');
+    </script>
+
+
+
+    <script type="f42ab2d1ca0d2d09cbd5740a-text/javascript">
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W3TZL2S');</script>
+
+
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name=viewport content="initial-scale=1, maximum-scale=1,user-scalable=no, width=device-width">
+
+    <title>@Model.Title</title>
+
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:site_name" content="بوابة اخبار اليوم" />
+
+
+    <meta name="keywords" content="وزير القوي العاملة محمد سعفان,رواتب مجزية,وزير القوى العاملة,ملتقى توظيف,بورسعيد" />
+
+    <meta itemprop="name" content="">
+    <meta itemprop="description" content="يفتتح وزير القوي العاملة محمد سعفان ، واللواء عادل الغضبان محافظ بورسعيد ، والدكتور أيمن محمد إبراهيم رئيس جامعة الإقليم ، الأحد المقبل، بالمركز الثقافي للمحافظة ملتقي التوظيف الأول الذي تنظمه الجامعة ومديرية القوي العاملة ببورسعيد">
+    <meta itemprop="image" content="https://Images.akhbarelyom.com/images/images/large/20201217113238238.jpg">
+
+    <meta name="twitter:title" content="رواتب مجزية| وزير القوى العاملة يفتتح ملتقى توظيف ببورسعيد.. الأحد">
+    <meta property="og:title" content="رواتب مجزية| وزير القوى العاملة يفتتح ملتقى توظيف ببورسعيد.. الأحد" />
+    <meta name="twitter:image:src" content="https://Images.akhbarelyom.com/images/images/large/20201217113238238.jpg">
+    <meta property="og:image" content="https://Images.akhbarelyom.com/images/images/large/20201217113238238.jpg" />
+    <meta name="twitter:description" content="يفتتح وزير القوي العاملة محمد سعفان ، واللواء عادل الغضبان محافظ بورسعيد ، والدكتور أيمن محمد إبراهيم رئيس جامعة الإقليم ، الأحد المقبل، بالمركز الثقافي للمحافظة ملتقي التوظيف الأول الذي تنظمه الجامعة ومديرية القوي العاملة ببورسعيد">
+    <meta property="og:description" content="بوابة أخبار اليوم الإلكترونية" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="https://akhbarelyom.com/" />
+    <meta property="article:published_time" content="الخميس، 17 ديسمبر 2020 - 11:32 ص" />
+    <meta property="article:modified_time" content="الخميس، 17 ديسمبر 2020 - 11:32 ص" />
+    <meta property="article:section" content="@Model.Section?.SecTitle" />
+    <meta property="article:tag" content="وزير القوي العاملة محمد سعفان,رواتب مجزية,وزير القوى العاملة,ملتقى توظيف,بورسعيد" />
+
+    <meta name="abstract" content="وتتفرد بوابة أخبار اليوم بإصدارات عديدة لأقدم وأوسع الصحف المصرية والعربية انتشارًا وهي الأخبار اليومي و«أخبار اليوم» الأسبوعية، ومجلة «آخر ساعة»، و«أخبار الحوادث» التي تهتم بمتابعة أخبار الجريمة ، وجريدة و«أخبار النجوم» لمتابعة أخبار وقضايا النجوم في مجال السينما والدراما والتليفزيون والغناء والأوبرا، وجريدة «أخبار الأدب» وتهتم بالفكر والثقافة في مصر والعالم وحياة رموز الفكر والمبدعين" />
+
+    <meta name="note" content=",ترفع شعار, الخبر الدقيق الموثوق منه دار أخبار اليوم " />
+    <meta name="subject" content="بوابة أخبار اليوم نافذة على صحافة الديجيتال" />
+    <meta name="identifier-URL" content="https://akhbarelyom.com" />
+    <meta name="linkage" content="https://akhbarelyom.com" />
+    <meta name="creation_date" content="10-Nov-2000" />
+    <meta name="revisit-after" content="24 hours" />
+    <meta name="distribution" content="global" />
+    <meta http-equiv="Expires" content="3">
+
+    <meta name="classification" content="All" />
+    <meta name="author" content="akhbarelyom" />
+    <meta name="robots" content="all" />
+    <meta name="googlebot" content="NOODP" />
+    <meta name="SLURP" content="NOODP" />
+    <meta name="MSNBOT" content="NOODP" />
+    <meta name="owner" content="https://akhbarelyom.com" />
+    <meta name="copyright" content="akhbarelyom.com" />
+    <meta name="rating" content="general" />
+    <meta name="web_author" content="https://akhbarelyom.com" />
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="operator" content="akhbarelyom" />
+    <meta name="contactOrganization" content="https://akhbarelyom.com" />
+    <meta name="contactStreetAddress1" content="6-elsshafh-st" />
+    <meta name="contactCity" content="cairo" />
+    <meta name="contactCountry" content="Egypt" />
+    <meta name="contactPhoneNumber" content="[+202] 5807000 - 25782900 - 25782800" />
+    <meta name="contactNetworkAddress" content="https://akhbarelyom.com" />
+
+    <meta name="msvalidate.01" content="46A3D7658EC0908C4496866972503E97" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <meta name="application-name" content="AkhbarElYoum">
+    <meta name="msapplication-starturl" content="https://akhbarelyom.com">
+    <meta name="msapplication-tooltip" content="AkhbarElYoum, News top Web site">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="DC.Creator" content="Developed By akhbarelyom Team">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="cleartype" content="on" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="True" />
+
+    <meta name="msvalidate.01" content="5E339357EB4A861FE9D78C790988D3D2" />
+    <meta name="yandex-verification" content="814a1e855157ceff" />
+
+
+    <link rel="original-source" href="https://akhbarelyom.com/news/newdetails/3197221/1/رواتب-مجزية-وزير-القوى-العاملة-يفتتح-ملت" />
+    <link rel="amphtml" id="canonicalUrl" href="https://m.akhbarelyom.com/news/newdetails/3197221/1/رواتب-مجزية-وزير-القوى-العاملة-يفتتح-ملت/amp" />
+    <link rel="canonical" id="canonicalUrl" href="https://akhbarelyom.com/news/newdetails/3197221/1/رواتب-مجزية-وزير-القوى-العاملة-يفتتح-ملت" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="/Content/css?v=rbmg_l_NT-dkBFvGfAB7bAiuWdqmLuejYgbaRPLr2P41" rel="stylesheet" />
+    <link rel="alternate" href="https://akhbarelyom.com" hreflang="ar" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+<style>
+    .blog-single-gallery, .blog-single {
+        direction: rtl;
+        text-align: right;
+    }
+
+    blockquote {
+        border-left: none !important;
+        border-right: 5px solid #eee;
+    }
+
+    .related-posts {
+        direction: ltr;
+    }
+
+    //.sec-title, .related-posts {
+        text-align: left;
+    }
+
+    .related-item-carousel .owl-nav {
+        left: 0px;
+        right: unset;
+    }
+
+    ::after, ::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .qb-clock::before {
+        content: "\e943";
+    }
+
+    element {
+    }
+
+    .blog-single .inner-box .post-meta li .icon {
+        right: -20px;
+        left: unset !important;
+    }
+</style>
+
+
+
+
+
+
+
+<!--Sidebar Page Container-->
+<div class="sidebar-page-container">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+
+
+            <!--Content Side-->
+            <div class="content-side col-lg-8 col-md-8 col-sm-12 col-xs-12" style="float:right;">
+
+                <!--Blog Single Gallery-->
+                <div class="blog-single-gallery grey-bg">
+                    <div class="auto-container">
+
+                        <ul class="tag-title">
+                            <li>@Model.Section?.SecTitle</li>
+                        </ul>
+                        <h2 style="color: #000;padding-bottom: 17px;"> @Model.Title </h2>
+                        <div class="image">
+                            <img style="width: 100%;" src="https://Images.akhbarelyom.com/images/images/large/@Model.Picture1.PictureName" alt="" />
+                        </div>
+                        <h4 style="text-align: center;">@Model.PictureCaption1</h4>
+                    </div>
+                </div>
+                <!--End Single Gallery-->
+
+                <div class="content">
+                    <div class="blog-single">
+                        <div class="inner-box">
+                            <div class="upper-box">
+
+                                <ul class="post-meta">
+                                    <li style="float: left;direction: rtl;">@Model.PublishDate <span class="icon qb-clock"></span></li>
+                                    <li><span class="icon qb-user2"></span>@Model.ByLine</li>
+                                </ul>
+                                <ul class="social-icon-one alternate">
+                                    <li class="share">Share:</li>
+                                    <li><a href="https://www.facebook.com/AkhbarElYom"><span class="fa fa-facebook"></span></a></li>
+                                    <li class="twitter"><a href="https://twitter.com/akhbarelyom"><span class="fa fa-twitter"></span></a></li>
+                                    <li class="g_plus"><a href="https://www.youtube.com/user/akhbarelyoumtv"><span class="fa fa-youtube"></span></a></li>
+                                    <li class="linkedin"><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
+                                    <li class="pinteret"><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="text">
+
+
+                                @Html.Raw(HttpUtility.HtmlDecode(Model.Story))
+                                <blockquote>
+                                    <ul class="tag-title">
+                                        <li>أقرأ أيضا</li>
+                                    </ul>
+                                    <li>- <a href="">ندوة «عمال مصر» تشيد بإجراءات تأمين بيئة العمل للوقاية من كورونا</a></li>
+
+                                    <li>- <a href="">«الدفعة السابعة»| الأوقاف توزع 2000 زي أزهري على الأئمة</a></li>
+
+                                    <li>- <a href="">مقبرتي «أنتي وشدو» آثار منسية في بني سويف</a></li>
+
+                                    <li>- <a href="">تعطيل الدراسة بكفر الشيخ بسبب الطقس السيئ</a></li>
+
+                                </blockquote>
+
+                            </div>
+                            <!--post-share-options-->
+                            <div class="post-share-options">
+                                <div class="tags clearfix"><a href="#">درجات الحرارة</a> <a href="#">الأرصاد</a> <a href="#">الطقس</a></div>
+                            </div>
+
+                            <!--New Article-->
+                            <ul class="new-article clearfix">
+                                <li><a href="#"><span class="fa fa-angle-left"></span> &ensp; &ensp; &ensp; &ensp; الخبر السابق</a></li>
+                                <li><a href="#">الخبر التالي &ensp; &ensp; &ensp; &ensp; <span class="fa fa-angle-right"></span></a></li>
+                            </ul>
+                        </div>
+
+
+                        <!--Related Posts-->
+                        <div class="related-posts">
+                            <div class="sec-title">
+                                <h2>أخبار مرتبطة</h2>
+                            </div>
+                            <div class="related-item-carousel owl-carousel owl-theme">
+
+                                <!--News Block Two-->
+                                <div class="news-block-two small-block">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <a href="#"><img src="images/resource/news-40.jpg" alt="" /></a>
+                                            <div class="category"><a href="#">أخبار مصر</a></div>
+                                        </div>
+                                        <div class="lower-box">
+                                            <h3><a href="#">************</a></h3>
+                                            <ul class="post-meta">
+                                                <li><span class="icon fa fa-clock-o"></span>April 03, 2016</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--News Block Two-->
+                                <div class="news-block-two small-block">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <a href="#"><img src="images/resource/news-41.jpg" alt="" /></a>
+                                            <div class="category"><a href="#">Sports</a></div>
+                                        </div>
+                                        <div class="lower-box">
+                                            <h3><a href="#">مقبرتي «أنتي وشدو» آثار منسية في بني سويف </a></h3>
+                                            <ul class="post-meta">
+                                                <li><span class="icon fa fa-clock-o"></span>April 04, 2016</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--News Block Two-->
+                                <div class="news-block-two small-block">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <a href="#"><img src="images/resource/news-42.jpg" alt="" /></a>
+                                            <div class="category">photo</div>
+                                        </div>
+                                        <div class="lower-box">
+                                            <h3><a href="#">ندوة «عمال مصر» تشيد بإجراءات تأمين بيئة العمل للوقاية من كورونا</a></h3>
+                                            <ul class="post-meta">
+                                                <li><span class="icon fa fa-clock-o"></span>April 04, 2016</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--News Block Two-->
+                                <div class="news-block-two small-block">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <a href="#"><img src="images/resource/news-40.jpg" alt="" /></a>
+                                            <div class="category"><a href="#">Travel</a></div>
+                                        </div>
+                                        <div class="lower-box">
+                                            <h3><a href="#">«الدفعة السابعة»| الأوقاف توزع 2000 زي أزهري على الأئمة</a></h3>
+                                            <ul class="post-meta">
+                                                <li><span class="icon fa fa-clock-o"></span>April 03, 2016</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--News Block Two-->
+                                <div class="news-block-two small-block">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <a href="#"><img src="images/resource/news-41.jpg" alt="" /></a>
+                                            <div class="category"><a href="#">Sports</a></div>
+                                        </div>
+                                        <div class="lower-box">
+                                            <h3><a href="#">مقبرتي «أنتي وشدو» آثار منسية في بني سويف</a></h3>
+                                            <ul class="post-meta">
+                                                <li><span class="icon fa fa-clock-o"></span>April 04, 2016</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--News Block Two-->
+                                <div class="news-block-two small-block">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <a href="#"><img src="images/resource/news-42.jpg" alt="" /></a>
+                                            <div class="category">photo</div>
+                                        </div>
+                                        <div class="lower-box">
+                                            <h3><a href="#">تعطيل الدراسة بكفر الشيخ بسبب الطقس السيئ</a></h3>
+                                            <ul class="post-meta">
+                                                <li><span class="icon fa fa-clock-o"></span>April 04, 2016</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <partial name="_Sidbar" />
+        </div>
+    </div>
+</div>
 
 

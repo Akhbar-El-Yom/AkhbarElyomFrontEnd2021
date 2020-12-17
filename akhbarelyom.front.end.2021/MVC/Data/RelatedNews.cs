@@ -9,5 +9,7 @@ namespace MVC.Data
     {
         public int NewId { get; set; }
         public int RelatedId { get; set; }
+
+
     }
 }
