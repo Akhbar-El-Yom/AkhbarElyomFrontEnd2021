@@ -39,8 +39,10 @@ namespace MVC.Controllers
         public IActionResult newssection(int Id)
         {
             List<News> a;
+            MainSection b;
             try
             {
+                b = _dal.GetNewsSection().GetSectionItem(Id);
                 a = _dal.GetNewsSection().GetSectionItem2(Id);
             }
             catch (Exception e)
@@ -48,7 +50,7 @@ namespace MVC.Controllers
                 string es = e.Message;
                 return RedirectToAction("error404");
             }
-            return View(a);
+            return View(b.News.ToList());
         }
         public IActionResult error404()
         {

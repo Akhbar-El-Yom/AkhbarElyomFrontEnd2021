@@ -1,4 +1,5 @@
 ﻿// Data Access Layer Service
+using Microsoft.EntityFrameworkCore;
 using MVC.Data;
 using MVC.Services.EFQueries;
 using System;
@@ -19,6 +20,7 @@ namespace MVC.Services
         public DAL(AppDbContext dbContext)
         {
             _db = dbContext;
+            // _db.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             home = new Home(_db);
             layout = new Layout(_db);
             news = new NewsDetails(_db);

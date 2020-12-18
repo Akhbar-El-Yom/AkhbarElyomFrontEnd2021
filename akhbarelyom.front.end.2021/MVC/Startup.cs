@@ -27,11 +27,15 @@ namespace MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options => options
-            .UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            .UseSqlServer(
+                Configuration.GetConnectionString("DefaultConnection")
+            )
+            .EnableSensitiveDataLogging());
 
             services.AddScoped<IDAL,DAL>();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); ;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

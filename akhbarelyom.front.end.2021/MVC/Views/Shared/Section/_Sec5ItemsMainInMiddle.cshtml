@@ -1,0 +1,68 @@
+﻿@model MVC.Data.MainSection
+<section class="blog-gallery grey-bg">
+    <div class="auto-container">
+        <div class="sec-title" style="text-align: center;">
+            <h2 style="font-weight: 600;font-size: 21px;">@Model.SecTitle</h2>
+        </div>
+        
+        <div class="row clearfix">
+
+            <div class="column pull-left col-md-3 col-sm-6 col-xs-12">
+
+
+                @foreach (MVC.Data.News item in Model.News.Skip(1).Take(2))
+                {
+
+                    <!--News Block Two-->
+                    <div class="news-block-two small-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <a href="NewsDetails.aspx"><img class="wow fadeIn animated" data-wow-delay="0ms" data-wow-duration="1500ms" src="https://images.akhbarelyom.com/images/images/small/@item.Picture1.PictureName" alt="" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeIn;"></a>
+                            </div>
+                            <div class="lower-box">
+                                <h3 style="direction:rtl;"><a href="NewsDetails.aspx">@item.Title</a></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+            <div class="column pull-right col-md-3 col-sm-6 col-xs-12">
+                @foreach (MVC.Data.News item in Model.News.Skip(3).Take(2))
+                {
+                    <!--News Block Two-->
+                    <div class="news-block-two small-block">
+                        <div class="inner-box">
+                            <div class="image">
+                                <a href="NewsDetails.aspx"><img class="wow fadeIn animated" data-wow-delay="0ms" data-wow-duration="1500ms" src="https://images.akhbarelyom.com/images/images/small/@item.Picture1.PictureName" alt="" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeIn;"></a>
+                            </div>
+                            <div class="lower-box">
+                                <h3><a href="NewsDetails.aspx" style="direction:rtl;">@item.Title</a></h3>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <div class="column col-md-6 col-sm-12 col-xs-12">
+                @{MVC.Data.News main = Model.News.First(); }
+                <!--News Block Seven-->
+                <div class="news-block-seven style-two">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="NewsDetails.aspx"><img class="wow fadeIn animated" data-wow-delay="0ms" data-wow-duration="1500ms" src="https://images.akhbarelyom.com/images/images/large/@main.Picture1.PictureName" alt="" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeIn;"></a>
+                        </div>
+                        <div class="lower-box">
+                            <h3 style="text-align: center;"><a href="NewsDetails.aspx">@main.Title</a></h3>
+                            <div class="text" style="text-align: center; direction:rtl;">@main.Brief</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

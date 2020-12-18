@@ -13,9 +13,9 @@
 @* SectionId = 1 أخبار مصر  *@
 <partial name="Section/_SubSecTwoColMainAnd2Small" model="@_DAL.GetLayout().sections.ToList().Single(e => e.SectionId == 1)" />
 
-@* SectionId = 1 أخبار الرياضة  *@
+@* SectionId = 23 أخبار الرياضة  *@
 <partial name="Section/_SubSecTwoColMainAnd2Small" model="@_DAL.GetLayout().sections.ToList().Single(e => e.SectionId == 23)" />
 
-@*  الاصدارات pdf  *@
-@*<partial name="_IssuesPdf" />*@
+@*  SectionId = 191  كلاسيك  *@
+<partial name="Section/_Sec5ItemsMainInMiddle" model="@_DAL.GetNewsSection().GetSectionItem(191)" />
 
