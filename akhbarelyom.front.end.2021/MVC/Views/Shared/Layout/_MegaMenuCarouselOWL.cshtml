@@ -1,0 +1,26 @@
+﻿@model MVC.Data.MainSection
+<a href="~/news/newssection/@Model.SectionId">@Model.SecTitle</a>
+<ul class="mega-menu-bar">
+
+    <div class="mega-menu-carousel owl-carousel owl-theme">
+
+        @foreach (MVC.Data.News item in Model.News.Take(8))
+        {
+            <!--News Block Nine-->
+            <div class="news-block-nine">
+                <div class="inner-box">
+                    <div class="image">
+                        <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/@item.Picture1.PictureName" alt="" /></a>
+                        <div class="category"><a href="#">@Model.SecTitle</a></div>
+                    </div>
+                    <div class="lower-box">
+                        <h3><a href="#">@item.Title</a></h3>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    </div>
+
+</ul>

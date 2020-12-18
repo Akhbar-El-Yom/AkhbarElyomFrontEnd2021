@@ -1,4 +1,4 @@
-﻿@inject MVC.Services.IDAL _dal;
+﻿@inject MVC.Services.IDAL _DAL;
 
 
 <!DOCTYPE html>
@@ -39,8 +39,8 @@
                             <div class="single-item-carousel owl-carousel owl-theme owl-rtl">
                                 
                                 @{
-                                    var sections = _dal.GetLayout().sections;
-                                    foreach (var item in _dal.GetLayout().NewsTickers)
+                                    // var sections = _DAL.GetLayout().sections;
+                                    foreach (var item in _DAL.GetLayout().NewsTickers)
                                     {
 
                                         <div class="slide">
@@ -111,11 +111,11 @@
 
                             <div class="navbar-collapse collapse clearfix" id="bs-example-navbar-collapse-1">
                                 <ul class="navigation clearfix">
-                                    <li class="dropdown">
+                                    <li class="current">
                                         <a href="#"><i class="fa fa-home" style="font-size:xx-large"></i></a>
 
                                     </li>
-                                    <li class="current dropdown">
+                                    <li class="dropdown">
                                         <a href="#">مصر</a>
                                         <ul>
                                             <li><a href="#">أخبار مصر</a></li>
@@ -307,118 +307,7 @@
                                         </ul>
                                     </li>
                                     <li class="mega-menu">
-                                        <a href="##">أقتصاد</a>
-                                        <ul class="mega-menu-bar">
-
-                                            <div class="mega-menu-carousel owl-carousel owl-theme">
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123183210977.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">أقتصاد</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">لأول مرة منذ شهور.. تراجع الذهب عيار 21 لأقل من 800 جنيه</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124050247153.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">أقتصاد</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">سعر الدولار أمام الجنيه في البنوك اليوم 24 نوفمبر</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201112085625186.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">سيارات</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">شاهد.. أمريكا تطلق سيارة جبارة بـ 6 عجلات للطرق الوعرة</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124112655470.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">عقارات</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">تعرف على| أسعار الحديد المحلية بالأسواق الثلاثاء 24 نوفمبر</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201124113046987.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">عقارات</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">ننشر أسعار الأسمنت المحلية بالأسواق الثلاثاء 24 نوفمبر</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123190848225.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">سياحة وسفر</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">لعشاق السياحة والطبيعة.. أجمل مزارات علاجية في مصر</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201123130735596.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">سياحة وسفر</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">«أم الدنيا»..«صحيفة أمريكية» تشجع على عودة السياحة بمصر في زمن الكورونا</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!--News Block Nine-->
-                                                <div class="news-block-nine">
-                                                    <div class="inner-box">
-                                                        <div class="image">
-                                                            <a href="#"><img src="https://Images.akhbarelyom.com/images/images/small/20201121025835945.jpg" alt="" /></a>
-                                                            <div class="category"><a href="#">الطاقة</a></div>
-                                                        </div>
-                                                        <div class="lower-box">
-                                                            <h3><a href="#">غلق باب التقديم على عدادات الكهرباء الكودية 30 نوفمبر</a></h3>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </ul>
+                                        <partial name="Layout/_MegaMenuCarouselOWL" model="@_DAL.GetNewsSection().GetSectionItem(10)" />
                                     </li>
                                     <li><a href="#">تحقيقات</a></li>
                                     <li class="dropdown">
